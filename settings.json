@@ -1,0 +1,411 @@
+{
+  "version": "12.5.2",
+  "name": "Heliactyl",
+  "letter": "H",
+  "defaulttheme": "default",
+  "website": {
+    "port": 8000,
+    "secret": ""
+  },
+  "pterodactyl": {
+    "domain": "https://panel.example.net",
+    "key": "",
+    "client": ""
+  },
+  "linkvertise": {
+    "userid": "10000",
+    "coins": 5
+  },
+  "storelimits": {
+    "note": "This is in GB, not MB (the first setting to use GB eh?)",
+    "ram": "48383",
+    "disk": "128324",
+    "cpu": "4273773",
+    "servers": "273773"
+  },
+  "stripe": {
+    "enabled": false,
+    "note": "The key is the stripe API key and the coins is the amount per £1. If the stripe API key is invalid and stripe purchases are enabled, Heliactyl will crash when attempting to do transactions.",
+    "key": "100000000000000",
+    "coins": 100
+  },
+  "database": "sqlite://database.sqlite",
+  "api": {
+    "client": {
+      "api": {
+        "enabled": true,
+        "code": ""
+      },
+      "j4r": {
+        "enabled": true,
+        "ads": [
+          {
+            "name": "",
+            "invite": "https://discord.gg/urserverurl",
+            "id": "100000000000000",
+            "coins": 200
+          },
+          {
+            "name": "",
+            "invite": "https://discord.gg/urserverurl",
+            "id": "100000000000000",
+            "coins": 100
+          },
+          {
+            "name": "",
+            "invite": "https://discord.gg/urserverurl",
+            "id": "100000000000000",
+            "coins": 200
+          },
+          {
+            "name": "",
+            "invite": "https://discord.gg/urserverurl",
+            "id": "100000000000000",
+            "coins": 500
+          }
+        ]
+      },
+      "bot": {
+        "token": "",
+        "joinguild": {
+          "_comment": "The Discord bot must be in these servers and have invite permissions. Automatic guild joining will not work unless role packages are configured correctly.",
+          "enabled": true,
+          "guildid": [
+            "100000000000000"
+          ]
+        }
+      },
+      "passwordgenerator": {
+        "signup": true,
+        "note": "Use this to disable signups",
+        "length": 16
+      },
+      "allow": {
+        "newusers": true,
+        "regen": true,
+        "server": {
+          "create": true,
+          "modify": true,
+          "delete": true
+        },
+        "overresourcessuspend": false
+      },
+      "oauth2": {
+        "_comment": "Go to https://discord.dev/ and create an application to set these up.",
+        "id": "100000000000000",
+        "secret": "",
+        "link": "",
+        "callbackpath": "/callback",
+        "prompt": true,
+        "ip": {
+          "trust x-forwarded-for": true,
+          "block": [],
+          "duplicate check": false
+        }
+      },
+      "ratelimits": {
+        "/callback": 2,
+        "/create": 1,
+        "/delete": 1,
+        "/modify": 1,
+        "/updateinfo": 1,
+        "/setplan": 2,
+        "/admin": 1,
+        "/regen": 1,
+        "/renew": 1,
+        "/api/userinfo": 1
+      },
+      "packages": {
+        "default": "default",
+        "list": {
+          "default": {
+            "ram": 2048,
+            "disk": 10240,
+            "cpu": 80,
+            "servers": 2
+          },
+          "booster": {
+            "ram": 16384,
+            "disk": 20480,
+            "cpu": 200,
+            "servers": 6
+          }
+        },
+        "rolePackages": {
+          "note": "This allows you to set a different plan to people who have a specific role however this requires the Discord bot to be configured and functioning. This is mainly used for Boost rewards",
+          "roleServer": "100000000000000",
+          "roles": {
+            "100000000000000": "booster"
+          }
+        }
+      },
+      "locations": {
+        "3": {
+          "name": "Germany",
+          "banner": "https://cdn.discordapp.com/attachments/987734229469253674/1007223251317043270/Germany_3.png",
+          "package": null
+        },
+        "4": {
+          "name": "France",
+          "banner": "https://cdn.discordapp.com/attachments/987734229469253674/1007223526794723418/Germany_4.png",
+          "package": null
+        },
+        "5": {
+          "name": "Netherlands",
+          "banner": "https://cdn.discordapp.com/attachments/987734229469253674/1007225201542569984/Copy_of_Germany.png",
+          "package": null
+        },
+        "6": {
+          "name": "Switzerland",
+          "banner": "https://cdn.discordapp.com/attachments/987734229469253674/1007225674265788416/Copy_of_Germany_1.png",
+          "package": null
+        },
+        "7": {
+          "name": "Russia",
+          "banner": "https://cdn.discordapp.com/attachments/987734229469253674/1007225973751685170/Germany_5.png",
+          "package": null
+        },
+        "8": {
+          "name": "Luxembourg",
+          "banner": "https://cdn.discordapp.com/attachments/987734229469253674/1007226230505996329/Copy_of_Germany_2.png",
+          "package": null
+        },
+        "9": {
+          "name": "Ukraine",
+          "banner": "https://cdn.discordapp.com/attachments/987734229469253674/1007226459477254205/Germany_6.png",
+          "package": null
+        },
+        "10": {
+          "name": "Moldova",
+          "banner": "https://cdn.discordapp.com/attachments/987734229469253674/1007226802965581854/Germany_7.png",
+          "package": null
+        },
+        "11": {
+          "name": "Spain",
+          "banner": "https://cdn.discordapp.com/attachments/987734229469253674/1007227220600823838/Germany_8.png",
+          "package": null
+        },
+        "12": {
+          "name": "Poland",
+          "banner": "https://cdn.discordapp.com/attachments/987734229469253674/1007227411647180891/Germany_9.png",
+          "package": null
+        },
+        "13": {
+          "name": "Latvia",
+          "banner": "https://cdn.discordapp.com/attachments/987734229469253674/1007227658809131018/Germany_10.png",
+          "package": null
+        },
+        "14": {
+          "name": "United Kingdom",
+          "banner": "https://cdn.discordapp.com/attachments/987734229469253674/1007227972668899378/Copy_of_Germany_3.png",
+          "package": null
+        },
+        "15": {
+          "name": "Belarus",
+          "banner": "https://cdn.discordapp.com/attachments/987734229469253674/1007228258997260368/Germany_11.png",
+          "package": null
+        }
+      },
+      "locverif": {
+         "locations":["3"],
+         "coins":4000
+       },
+      "eggs": {
+       "papert": {
+          "display": "Minecraft: Java Edition - Hybrid Paper",
+          "minimum": {
+            "ram": 1024,
+            "disk": 1024,
+            "cpu": 80
+          },
+          "maximum": {
+            "ram": null,
+            "disk": null,
+            "cpu": null
+          },
+          "info": {
+            "egg": 15,
+            "docker_image": "quay.io/clrxbl/pterodactyl:openj9",
+            "startup": "./start.sh",
+            "environment": {
+              "SERVER_JARFILE": "server.jar"
+            },
+            "feature_limits": {
+              "databases": 4,
+              "backups": 4
+            }
+          }
+        },
+        "paper": {
+          "display": "Minecraft: Java Edition - Normal Paper",
+          "minimum": {
+            "ram": 1024,
+            "disk": 1024,
+            "cpu": 80
+          },
+          "maximum": {
+            "ram": null,
+            "disk": null,
+            "cpu": null
+          },
+          "info": {
+            "egg": 18,
+            "docker_image": "ghcr.io/pterodactyl/yolks:java_17",
+            "startup": "java -Xms128M -Xmx{{SERVER_MEMORY}}M -Dterminal.jline=false -Dterminal.ansi=true -jar {{SERVER_JARFILE}}",
+            "environment": {
+              "SERVER_JARFILE": "server.jar",
+              "BUILD_NUMBER": "latest"
+            },
+            "feature_limits": {
+              "databases": 4,
+              "backups": 4
+            }
+          }
+        },
+        "pmmp": {
+          "display": "Minecraft: Bedrock Edition - Pocketmine",
+          "minimum": {
+            "ram": 512,
+            "disk": 512,
+            "cpu": 75
+          },
+          "maximum": {
+            "ram": null,
+            "disk": null,
+            "cpu": null
+          },
+          "info": {
+            "egg": 18,
+            "docker_image": "ghcr.io/parkervcp/yolks:debian",
+            "startup": "./bin/php7/bin/php ./PocketMine-MP.phar --no-wizard --disable-ansi",
+            "environment": {
+              "VERSION": "pm4"
+            },
+            "feature_limits": {
+              "databases": 4,
+              "backups": 4
+            }
+          }
+        },
+        "vanilla": {
+          "display": "Minecraft: Bedrock Edition - Vanilla",
+          "minimum": {
+            "ram": 512,
+            "disk": 512,
+            "cpu": 75
+          },
+          "maximum": {
+            "ram": null,
+            "disk": null,
+            "cpu": null
+          },
+          "info": {
+            "egg": 17,
+            "docker_image": "ghcr.io/parkervcp/yolks:debian",
+            "startup": "./bedrock_server",
+            "environment": {
+              "BEDROCK_VERSION": "latest",
+              "LD_LIBRARY_PATH": ".",
+              "SERVERNAME": "Hival Bedrock Server",
+              "GAMEMODE": "survival",
+              "DIFFICULTY": "easy",
+              "CHEATS": "true"
+            },
+            "feature_limits": {
+              "databases": 4,
+              "backups": 4
+            }
+          }
+        }
+      },
+      "coins": {
+        "enabled": true,
+        "store": {
+          "_comment": "The cost and per is not intended to used with 0. This is not intended to sell resources for coins. Make sure coins are enabled too, or else there can be errors.",
+          "enabled": true,
+          "ram": {
+            "cost": 400,
+            "per": 1536
+          },
+          "disk": {
+            "cost": 350,
+            "per": 5120
+          },
+          "cpu": {
+            "cost": 100,
+            "per": 10
+          },
+          "servers": {
+            "cost": 250,
+            "per": 4
+          }
+        }
+      }
+    },
+    "arcio": {
+      "_comment": "You can make an arc.io widget on https://arc.io. You can get money using arc.io.",
+      "enabled": true,
+      "widgetid": "none",
+      "afk page": {
+        "_comment": "This will not effect any current arc.io sessions, and will require a restart to kick everyone out of the websocket sesison.",
+        "_comment2": "Make sure coins are enabled if you choose to enable this option!",
+        "enabled": true,
+        "_comment3": "If you change the path, you need to restart for it to take full effect.",
+        "path": "afkwspath",
+        "_comment4": "This afk page will give the users [coins variable] coins every [every variable] seconds.",
+        "every": 30,
+        "_comment5": "The coins variable is meant to not be under 1. There may be bugs if the coins variable is less than 1.",
+        "coins": 2
+      }
+    }
+  },
+  "whitelist": {
+    "note": "This allows only specific people to be able to use the dashboard",
+    "status": false,
+    "users": [
+      "100000000000000"
+    ]
+  },
+  "servercreation": {
+    "note": "You can set how much it should cost to create a server here, the default price is free",
+    "cost": 0
+  },
+  "renewals": {
+    "note": "Renewals finally work in Heliactyl! Thank you for updating to v12.3.0, The cost is the amount of coins required to renew, and the delay is the amount of days before they need to renew. New servers after the 1st one will also cost the renewal amount",
+    "status": false,
+    "cost": 0,
+    "delay": 14
+  },
+  "logging": {
+    "status": false,
+    "webhook": "Webhook URL",
+    "actions": {
+      "user": {
+        "signup": true,
+        "create server": true,
+        "gifted coins": true,
+        "modify server": true,
+        "buy servers": true,
+        "buy ram": true,
+        "buy cpu": true,
+        "buy disk": true
+      }, 
+      "admin": {
+        "set coins": true,
+        "add coins": true,
+        "set resources": true,
+        "set plan": true,
+        "create coupon": true,
+        "revoke coupon": true,
+        "remove account": true,
+        "view ip": true
+      }
+    }
+  },
+  "antivpn": {
+    "note": "EXPERIMENTAL! This may or may not work, For antivpn to work, generate an apikey on https://proxycheck.io/. If you put no key, Heliactyl will disable antivpn.",
+    "status": false,
+    "APIKey": "Proxycheck APIKey",
+    "whitelistedIPs": ["IP address"]
+  }
+}
