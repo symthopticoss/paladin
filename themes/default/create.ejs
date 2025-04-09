@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/987734229469253674/992747956056895508/Copy_of_Copy_of_Copy_of_EXAL_1024_1024px_SoundCloud_Banner_YouTube_Channel_Art_1000_1000px_27.png" />
-	<title>Hival</title>
+	<title>Instances</title>
 	<link href="../assets/css/new.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <!- LoadingBar Component Link ->
@@ -142,10 +142,10 @@ h1 {
 <center>
 <img style="width: 140px; height:140px; box-shadow: none;" src="https://cdn.discordapp.com/attachments/987734229469253674/1007245670811439174/Copy_of_untitled_22.png" height=140 width=140><br><br><br>
   <h2 style="color: white;">Uh oh!</h2>
-  <h4 style="color: #6c757d;">The server could not be created, the API responded with the following error:</h4>
+  <h4 style="color: #6c757d;">The instance could not be created, the API responded with the following error:</h4>
 <code style="color: #6c757d;">
                 <% if (req.query.err == "MISSINGVARIABLE") { %>
-                    invalid server info
+                    invalid instance info
                 <% } else if (req.query.err == "NOTANUMBER") { %>
                     resources must be numbers
                 <% } else if (req.query.err == "ERRORONCREATE") { %>
@@ -709,7 +709,7 @@ document.getElementById("defaultOpen").click();
 				},
 				{
 					coords: [40.416775, -3.703790],
-					name: "Madrid "
+					name: "Madrid"
 				}
 			];
 			var map = new jsVectorMap({
