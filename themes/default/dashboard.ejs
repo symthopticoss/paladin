@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/987734229469253674/992747956056895508/Copy_of_Copy_of_Copy_of_EXAL_1024_1024px_SoundCloud_Banner_YouTube_Channel_Art_1000_1000px_27.png" />
+	<title>Hival</title>
+	<link href="../assets/css/new.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <!- LoadingBar Component Link ->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/nanobar/0.4.2/nanobar.js"></script>
+</head>
+ <script type="text/javascript">  
+   // Heliactyl Load Time Checker
+     var before_loadtime = new Date().getTime();  
+     window.onload = Pageloadtime;  
+     function Pageloadtime() {  
+         var aftr_loadtime = new Date().getTime();  
+         // Time calculating in seconds  
+         pgloadtime = (aftr_loadtime - before_loadtime) / 1000  
+  
+         document.getElementById("loadtime").innerHTML = pgloadtime + "s";  
+     }  
+</script>  
+<style>
+h1 {
+  font-size: 40px;
+  background-image: linear-gradient(to right, #6565d6, #CB8000);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+</style>
+
+<body style="font-family: Inter; sans-serif;">
+	<div class="wrapper">
+		<div class="main">
+			<nav style="background-image: url('https://cdn.discordapp.com/attachments/987734229469253674/1001803940062580826/27082020_5.png'); color: white; height: 120px;" class="navbar navbar-expand navbar-light navbar-bg">
+				<a class="nav-item">
+                   <img src="https://cdn.discordapp.com/attachments/987734229469253674/992747956056895508/Copy_of_Copy_of_Copy_of_EXAL_1024_1024px_SoundCloud_Banner_YouTube_Channel_Art_1000_1000px_27.png" height=60 width=60>
+                </a>
+
+				<div class="navbar-collapse collapse">
+					<ul class="navbar-nav navbar-align">
+						<li class="nav-item dropdown">
+							<a style="color: white; !important" class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
+                <i class="align-middle text-white" data-feather="copy"></i>
+              </a>
+
+							<a class="nav-link dropdown-toggle d-none d-sm-inline-block text-white" href="#" data-bs-toggle="dropdown">
+                <span class="text-white"><%= userinfo.username %>#<%= userinfo.discriminator %></span>
+              </a>
+							<div style="background-color: #45454B; border: 3px solid #565660;" class="dropdown-menu dropdown-menu-end">
+								<a href="../logout" style="background-color: #45454B; color: white;" class="dropdown-item" >Logout</a>
+            <script>
+              let balance = document.getElementById("balance")
+              balance.textContent = Math.floor(<%= coins %> * 100) / 100
+            </script>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<nav style="background-color: #2B2B2D; color: white;" class="navbar navbar-expand navbar-light navbar-bg">
+				<a class="nav-item">
+                   <li style="text-decoration: none !important; color: white !important;" class="navbutton">
+                     <a href="../dashboard" style="text-decoration: none !important; color: white !important;" class="navtext">
+                       My Servers
+                     </a>
+                   </li>
+                </a>
+				<a class="nav-item">
+                   <li style="text-decoration: none !important; color: white !important;" class="navbutton">
+                     <a href="../credentials" style="text-decoration: none !important; color: white !important;" class="navtext">
+                       Credentials
+                     </a>
+                   </li>
+                </a>
+				<a class="nav-item">
+                   <li style="text-decoration: none !important; color: white !important;" class="navbutton">
+                     <a href="../servers/new" style="text-decoration: none !important; color: white !important;" class="navtext">
+                       Create Server
+                     </a>
+                   </li>
+                </a>
+				<a class="nav-item">
+                   <li style="text-decoration: none !important; color: white !important;" class="navbutton">
+                     <a href="../earn" style="text-decoration: none !important; color: white !important;" class="navtext">
+                       Earn
+                     </a>
+                   </li>
+                </a>
+				<a class="nav-item">
+                   <li style="text-decoration: none !important; color: white !important;" class="navbutton">
+                     <a href="../store" style="text-decoration: none !important; color: white !important;" class="navtext">
+                       Buy Resources
+                     </a>
+                   </li>
+                </a>
+
+<style>
+.navbutton {
+	color: white;
+    padding: 10px;
+    cursor: pointer;
+    list-style-type: none;
+    transition: height 0.4s, width 0.4s, background 0.4s;
+    border-radius: 5px;
+}
+
+.navbutton:hover {
+	color: white;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #3B3B40;
+    list-style-type: none;
+}
+</style>
+			</nav>
+			<main style="background-color: #212122;" class="content">
+				<div class="container-fluid p-0">
+                            <% if (pterodactyl.relationships.servers.data.length == 0) { %>
+                              <center>
+                                <img src="https://cdn.discordapp.com/attachments/987734229469253674/1004338703222702141/Copy_of_untitled_12.png" height=140 width=140><br><br>
+                                <h2 style="color: white;">Uh oh!</h4>
+                                <h4 class="text-muted">We couldn't find any servers on your account.</h5>
+                                <br>
+                                <a href="../servers/new" class="btn btn-secondary" class="padding: 20px;">CREATE SERVER</a>
+                              </center>
+                            <% } else { %>
+                              <% for (let i = 0, len = pterodactyl.relationships.servers.data.length; i < len; i++) { %>
+<div style="background-image: url('https://cdn.discordapp.com/attachments/987734229469253674/1004351030382833815/qu.png'); color: white; border-radius: 5px; width: 660px; height: 280px;">
+                                <div style="padding: 15px;">
+                                <center><br><br><br><br><br>
+                                <h3 class="text-white"><%= pterodactyl.relationships.servers.data[i].attributes.name.length > 40 ? pterodactyl.relationships.servers.data[i].attributes.name.slice(0, 40) + "..." : pterodactyl.relationships.servers.data[i].attributes.name %></h3><h5 style="color: #C2C2CD; margin-bottom: 16px;">Server type: Minecraft</h5><br>
+                                <a role="button" class="btn btn-danger" style="padding: 15px;" onclick="if (confirm('Are you sure you want to delete the server? This action is irreversible.')) { window.location.href='/delete?id=<%= pterodactyl.relationships.servers.data[i].attributes.id %>' }">Delete</a>
+                                <a role="button" class="btn btn-secondary" style="padding: 15px; background: #2B2B2D !important;" href="/servers/edit?id=<%= pterodactyl.relationships.servers.data[i].attributes.id %>">Edit</a>
+                                </center>
+                               </div></div><br>
+                              <% } %>
+                            <% } %>
+
+				</div>
+			</main>
+
+			<footer style="background-color: #29292B;" class="footer">
+				<div class="container-fluid">
+					<div class="row text-muted">
+						<div class="col-4 text-start">
+							<p class="mb-0">
+								<a class="text-muted" target="_blank">© 2021 - 2022 <a class="text-white" href="https://hival.net">Hival</a>, All Rights Reserved.</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<script src="../assets/js/app.js"></script>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var ctx = document.getElementById("chartjs-dashboard-line").getContext("2d");
+			var gradient = ctx.createLinearGradient(0, 0, 0, 225);
+			gradient.addColorStop(0, "rgba(215, 227, 244, 1)");
+			gradient.addColorStop(1, "rgba(215, 227, 244, 0)");
+			// Line chart
+			new Chart(document.getElementById("chartjs-dashboard-line"), {
+				type: "line",
+				data: {
+					labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+					datasets: [{
+						label: "Sales ($)",
+						fill: true,
+						backgroundColor: gradient,
+						borderColor: window.theme.primary,
+						data: [
+							2115,
+							1562,
+							1584,
+							1892,
+							1587,
+							1923,
+							2566,
+							2448,
+							2805,
+							3438,
+							2917,
+							3327
+						]
+					}]
+				},
+				options: {
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					tooltips: {
+						intersect: false
+					},
+					hover: {
+						intersect: true
+					},
+					plugins: {
+						filler: {
+							propagate: false
+						}
+					},
+					scales: {
+						xAxes: [{
+							reverse: true,
+							gridLines: {
+								color: "rgba(0,0,0,0.0)"
+							}
+						}],
+						yAxes: [{
+							ticks: {
+								stepSize: 1000
+							},
+							display: true,
+							borderDash: [3, 3],
+							gridLines: {
+								color: "rgba(0,0,0,0.0)"
+							}
+						}]
+					}
+				}
+			});
+		});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			// Pie chart
+			new Chart(document.getElementById("chartjs-dashboard-pie"), {
+				type: "pie",
+				data: {
+					labels: ["Chrome", "Firefox", "IE"],
+					datasets: [{
+						data: [4306, 3801, 1689],
+						backgroundColor: [
+							window.theme.primary,
+							window.theme.warning,
+							window.theme.danger
+						],
+						borderWidth: 5
+					}]
+				},
+				options: {
+					responsive: !window.MSInputMethodContext,
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					cutoutPercentage: 75
+				}
+			});
+		});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			// Bar chart
+			new Chart(document.getElementById("chartjs-dashboard-bar"), {
+				type: "bar",
+				data: {
+					labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+					datasets: [{
+						label: "This year",
+						backgroundColor: window.theme.primary,
+						borderColor: window.theme.primary,
+						hoverBackgroundColor: window.theme.primary,
+						hoverBorderColor: window.theme.primary,
+						data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79],
+						barPercentage: .75,
+						categoryPercentage: .5
+					}]
+				},
+				options: {
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					scales: {
+						yAxes: [{
+							gridLines: {
+								display: false
+							},
+							stacked: false,
+							ticks: {
+								stepSize: 20
+							}
+						}],
+						xAxes: [{
+							stacked: false,
+							gridLines: {
+								color: "transparent"
+							}
+						}]
+					}
+				}
+			});
+		});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var markers = [{
+					coords: [31.230391, 121.473701],
+					name: "Shanghai"
+				},
+				{
+					coords: [28.704060, 77.102493],
+					name: "Delhi"
+				},
+				{
+					coords: [6.524379, 3.379206],
+					name: "Lagos"
+				},
+				{
+					coords: [35.689487, 139.691711],
+					name: "Tokyo"
+				},
+				{
+					coords: [23.129110, 113.264381],
+					name: "Guangzhou"
+				},
+				{
+					coords: [40.7127837, -74.0059413],
+					name: "New York"
+				},
+				{
+					coords: [34.052235, -118.243683],
+					name: "Los Angeles"
+				},
+				{
+					coords: [41.878113, -87.629799],
+					name: "Chicago"
+				},
+				{
+					coords: [51.507351, -0.127758],
+					name: "London"
+				},
+				{
+					coords: [40.416775, -3.703790],
+					name: "Madrid "
+				}
+			];
+			var map = new jsVectorMap({
+				map: "world",
+				selector: "#world_map",
+				zoomButtons: true,
+				markers: markers,
+				markerStyle: {
+					initial: {
+						r: 9,
+						strokeWidth: 7,
+						stokeOpacity: .4,
+						fill: window.theme.primary
+					},
+					hover: {
+						fill: window.theme.primary,
+						stroke: window.theme.primary
+					}
+				},
+				zoomOnScroll: false
+			});
+			window.addEventListener("resize", () => {
+				map.updateSize();
+			});
+		});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var date = new Date(Date.now() - 5 * 24 * 60 * 60 * 1000);
+			var defaultDate = date.getUTCFullYear() + "-" + (date.getUTCMonth() + 1) + "-" + date.getUTCDate();
+			document.getElementById("datetimepicker-dashboard").flatpickr({
+				inline: true,
+				prevArrow: "<span title=\"Previous month\">&laquo;</span>",
+				nextArrow: "<span title=\"Next month\">&raquo;</span>",
+				defaultDate: defaultDate
+			});
+		});
+	</script>
+<script>
+var options = {
+	classname: 'loadingbar',
+    id: 'loadingbar'
+};
+var nanobar = new Nanobar( options );
+nanobar.go( 30 );
+nanobar.go( 76 );
+nanobar.go(100);
+</script>
+<style>
+.loadingbar .bar {
+        background: white;
+        border-radius: 4px;
+        height: 4px;
+}
+</style>
+
+</body>
+
+</html>
