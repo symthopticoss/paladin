@@ -1,2 +1,2 @@
-# paladin
-Paladin: All in one lightweight dashboard for your Pterodactyl panel
+**Important**
+Paladin was originally created in 2023 by a team of developers. Paladin wasnt released that time, but know in 2025 its released, this version is slightly different from the real one. Ww havent tested this version yet and **dont recommend** using this version. Paladin is running on Z11 code and we dont provide any support for Z11 products. Z11 reached end of life by September 11, 2024. We have shifted everything to UI10 our new code powered by Tailwind.css and next.js. We recommend using [Hexactyl](https://github.com/symthopticoss/Hexactyl) our new client.
